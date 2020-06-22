@@ -1,0 +1,7 @@
+---
+- name: Ping server
+  hosts: all
+  gather_facts: yes
+  tasks:
+   - name: Check whether  server is reachable
+     action: ping
