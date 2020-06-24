@@ -11,6 +11,9 @@
 
     - name: create a report data
       shell: ansible -m setup --tree /out/report all
+      args:
+       executable: /bin/bash
+
 
     - name: generate report
       shell: /home/rdodia/ansible-cmdb-1.30/ansible-cmdb /out/report > /opt/report/system-overview.$(date +%Y%m%d%H%M%S).html
