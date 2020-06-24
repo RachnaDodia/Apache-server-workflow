@@ -1,6 +1,5 @@
 ---
-- hosts: localhost
-  connection: local
+- hosts: 192.168.0.112
   gather_facts: no
   become: true
   
