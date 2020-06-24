@@ -1,0 +1,10 @@
+---
+- hosts: 192.168.0.112
+  gather_facts: no
+  become: true
+  
+  tasks:
+    - name: create directory to generate and store reports
+      file:
+        path: /opt/report
+        state: directory
