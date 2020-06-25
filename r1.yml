@@ -13,4 +13,4 @@
       command: ansible all -m setup  -t /opt/report
 
     - name: generate report
-      shell: /home/rdodia/ansible-cmdb-1.30/ansible-cmdb /out/report > /opt/report/system-overview.$(date +%Y%m%d%H%M%S).html
+      command: ansible-cmdb /opt/report > /opt/report/system-overview.$(date +%Y%m%d%H%M%S).html
