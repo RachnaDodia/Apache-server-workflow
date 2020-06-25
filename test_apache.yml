@@ -1,6 +1,6 @@
 ---
 - name: Enable intranet services
-  hosts: 192.168.0.111
+  hosts: 192.168.0.112
   tasks:
    - name: latest version of httpd installed
      yum:
