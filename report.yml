@@ -10,7 +10,7 @@
         state: directory
 
     - name: create a report data
-      shell: ansible -m setup --tree /out/report all
+      shell: ansible -m setup -t /out/report localhost
 
     - name: generate report
       shell: /usr/local/bin/ansible-cmdb /out/report > /opt/report/system-overview.$(date +%Y%m%d%H%M%S).html
