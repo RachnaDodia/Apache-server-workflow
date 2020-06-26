@@ -3,6 +3,7 @@
   connection: local
   gather_facts: no
   become: true
+  ansible_become_password: x
 
   tasks:
     - name: create directory to generate and store reports
