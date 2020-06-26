@@ -1,17 +1,16 @@
 ---
-- hosts: 192.168.0.113
+- hosts: localhost
   connection: local
   gather_facts: no
-  become: true
-  
+
   tasks:
     - name: create directory to generate and store reports
       file:
-        path: /opt/report
+        path: report
         state: directory
 
     - name: create a report data
-      command: ansible all -m setup  -t /opt/report
+      shell: ansible -m setup -t report localhost
 
     - name: generate report
-      command: ansible-cmdb /opt/report > /opt/report/system-overview.$(date +%Y%m%d%H%M%S).html
+      shell: /usr/local/bin/ansible-cmdb report > report/system-overview.html
