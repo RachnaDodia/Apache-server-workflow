@@ -13,4 +13,4 @@
       shell: ansible -m setup -t /opt/report localhost
 
     - name: generate report
-      shell: /usr/local/bin/ansible-cmdb /opt/report > /opt/report/system-overview.html
+      shell: ansible-cmdb /opt/report > /opt/report/system.html
