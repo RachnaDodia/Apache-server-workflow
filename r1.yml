@@ -3,8 +3,7 @@
   connection: local
   gather_facts: no
   become: true
-  vars:
-    ansible_become_user: root
+
   tasks:
     - name: create directory to generate and store reports
       file:
