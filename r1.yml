@@ -6,6 +6,7 @@
   
   tasks:
     - name: create directory to generate and store reports
+      become: false
       file:
         path: /opt/report
         state: directory
