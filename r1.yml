@@ -2,11 +2,12 @@
 - hosts: localhost
   connection: local
   gather_facts: no
+   become:  yes
+   become_method: enable
+   become_password: x
 
   tasks:
     - name: create directory to generate and store reports
-      become_method: enable
-      become_password: x
       file:
         path: /opt/report
         state: directory
