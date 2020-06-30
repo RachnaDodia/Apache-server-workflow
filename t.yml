@@ -2,9 +2,8 @@
 - hosts: localhost
   connection: local
   gather_facts: no
-  become: true
-  vars:
-   ansible_become_password: x
+  become: false
+
   tasks:
     - name: create directory to generate and store reports
       file:
