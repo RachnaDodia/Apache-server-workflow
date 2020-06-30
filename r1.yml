@@ -9,7 +9,7 @@
         state: directory
 
     - name: create a report data
-      shell: ansible -m setup -t /opt/report all
+      shell: ansible -m setup -t /opt/report localhost
 
     - name: generate report
       shell: ansible-cmdb /opt/report > /opt/report/system.html
