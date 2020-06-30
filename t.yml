@@ -10,7 +10,7 @@
       file:
         path: /opt/report2
         state: directory
-       delegate_to: localhost
+      delegate_to: localhost
 
     - name: create a report data
       shell: sudo ansible -m setup -t /out/report2 localhost
