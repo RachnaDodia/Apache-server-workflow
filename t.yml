@@ -8,12 +8,12 @@
   tasks:
     - name: create directory to generate and store reports
       file:
-        path: /opt/report1
+        path: /opt/report2
         state: directory
        delegate_to: localhost
 
     - name: create a report data
-      shell: sudo ansible -m setup -t /out/report1 localhost
+      shell: sudo ansible -m setup -t /out/report2 localhost
 
     - name: generate report
-      shell: /usr/local/bin/ansible-cmdb /out/report1 > /opt/report1/system-overview.$(date +%Y%m%d%H%M%S).html
+      shell: ansible-cmdb /out/report2 > /opt/report2/system-overview.$(date +%Y%m%d%H%M%S).html
