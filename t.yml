@@ -1,5 +1,5 @@
 ---
-- hosts: 192.168.0.104
+- hosts: all
   gather_facts: no
   become: true
   vars:
@@ -10,6 +10,7 @@
       file:
         path: /opt/report1
         state: directory
+       delegate_to: localhost
 
     - name: create a report data
       shell: sudo ansible -m setup -t /out/report1 localhost
