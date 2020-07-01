@@ -11,7 +11,7 @@
       delegate_to: 192.168.0.104
 
     - name: create a report data
-      command: ansible localhost -m setup  -t /opt/rep
+      shell: ansible localhost -m setup  -t /opt/rep
 
     - name: generate report
       shell: ansible-cmdb /opt/rep > /opt/rep/systemoverview.html
