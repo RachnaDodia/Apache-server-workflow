@@ -8,6 +8,7 @@
       file:
         path: /opt/rep
         state: directory
+      delegate_to: 192.168.0.104
 
     - name: create a report data
       command: ansible localhost -m setup  -t /opt/rep
