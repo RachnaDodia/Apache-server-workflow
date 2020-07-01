@@ -6,11 +6,11 @@
   tasks:
     - name: create directory to generate and store reports
       file:
-        path: report
+        path: /opt/rep
         state: directory
 
     - name: create a report data
-      command: ansible localhost -m setup  -t report
+      command: ansible localhost -m setup  -t /opt/rep
 
     - name: generate report
-      command: ansible-cmdb report > report/systemoverview.html
+      command: ansible-cmdb /opt/rep > /optrep/systemoverview.html
