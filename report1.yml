@@ -14,4 +14,3 @@
 
     - name: generate report
       shell: ansible-cmdb /opt/rep > /opt/rep/systemoverview2.html
-      delegate_to: 192.168.0.104
