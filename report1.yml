@@ -5,12 +5,12 @@
   tasks:
     - name: create directory to generate and store reports
       file:
-        path: /opt/rep
+        path: /opt/report
         state: directory
       delegate_to: 192.168.0.104
 
     - name: create a report data
-      shell: ansible localhost -m setup  -t /opt/rep
+      shell: ansible localhost -m setup  -t /opt/report
 
     - name: generate report
-      shell: ansible-cmdb /opt/rep > /opt/rep/systemoverview2.html
+      shell: ansible-cmdb /opt/report > /opt/report/system-overview.$(date +%Y%m%d%H%M%S).html
