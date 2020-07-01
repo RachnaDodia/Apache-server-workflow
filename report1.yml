@@ -14,4 +14,4 @@
       command: ansible localhost -m setup  -t /opt/rep
 
     - name: generate report
-      shell: ansible-cmdb /opt/rep > /optrep/systemoverview.html
+      shell: ansible-cmdb /opt/rep > /opt/rep/systemoverview.html
