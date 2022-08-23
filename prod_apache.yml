@@ -1,6 +1,6 @@
 ---
 - name: Enable intranet services
-  hosts: node1
+  hosts: node3
   tasks:
    - name: latest version of httpd installed
      yum:
